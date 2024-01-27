@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Przelicznik walut</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title-box">
+        <img src="/assets/Calculator.png" alt="" class="icon" />
+        <div class="main-title">Przelicznik walut</div>
+      </div>
+      <div class="currency-counter">
+        <div class="currency-counter-box">
+          <form class="input-box">
+            <input
+              class="main-input"
+              type="number"
+              required
+              min="0.01"
+              step="0.01"
+              placeholder="Kwota"
+              name="incomeAmount"
+            />
+            <select
+              class="main-input currency-select"
+              required
+              placeholder="Waluta"
+            ></select>
+            <button class="counter-button">PRZELICZ</button>
+          </form>
+
+          <div class="pln-sum">
+            To:
+            <span class="pln-sum-number">0,00 PLN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
