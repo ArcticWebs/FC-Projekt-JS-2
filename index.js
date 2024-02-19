@@ -3,9 +3,11 @@ const url = "http://api.nbp.pl/api/exchangerates/rates/a/";
 const plnValue = document.querySelector("#plnValue");
 const amount = document.querySelector("#amount");
 const recalcForm = document.querySelector("#recalculate");
+const counterBox = document.querySelector("#counter-box");
 
 recalcForm.addEventListener("submit", (event) => {
   event.preventDefault();
+
   fetch(url + currency.value)
     .then((response) => response.json())
     .then((data) => {
