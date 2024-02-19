@@ -19,24 +19,30 @@
           <form class="input-box">
             <input
               class="main-input"
+              id="amount"
               type="number"
               required
               min="0.01"
               step="0.01"
               placeholder="Kwota"
-              name="incomeAmount"
+              name="Amount"
             />
             <select
               class="main-input currency-select"
+              id="currency"
               required
               placeholder="Waluta"
-            ></select>
-            <button class="counter-button">PRZELICZ</button>
+            >
+              <option>EUR</option>
+              <option>USD</option>
+              <option>CHF</option>
+            </select>
+            <button class="counter-button" id="recalculate">PRZELICZ</button>
           </form>
 
           <div class="pln-sum">
             To:
-            <span class="pln-sum-number">0,00 PLN</span>
+            <span class="pln-sum-number" id="plnValue">0,00 PLN</span>
           </div>
         </div>
       </div>
