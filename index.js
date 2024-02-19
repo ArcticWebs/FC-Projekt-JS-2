@@ -1,5 +1,5 @@
 const currency = document.querySelector("#currency");
-const url = "http://api.nbp.pl/api/exchangerates/rates/a/";
+const url = "https://api.nbp.pl/api/exchangerates/rates/a/";
 const plnValue = document.querySelector("#plnValue");
 const amount = document.querySelector("#amount");
 const recalcForm = document.querySelector("#recalculate");
