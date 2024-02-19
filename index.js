@@ -2,18 +2,15 @@ const currency = document.querySelector("#currency");
 const url = "http://api.nbp.pl/api/exchangerates/rates/a/";
 const plnValue = document.querySelector("#plnValue");
 const amount = document.querySelector("#amount");
-const recalcBtn = document.querySelector("#recalculate");
+const recalcForm = document.querySelector("#recalculate");
 
-recalcBtn.addEventListener("click", () => {
+recalcForm.addEventListener("submit", (event) => {
+  event.preventDefault();
   fetch(url + currency.value)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.rates[0].mid);
-
       const plnAmount = amount.value * data.rates[0].mid;
-      plnValue.innerText = plnAmount + " PLN";
-
-      console.log(plnAmount);
+      plnValue.innerText = plnAmount.toFixed(2) + " PLN";
     })
     .catch((err) => console.error(err));
 });
